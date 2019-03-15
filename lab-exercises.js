@@ -86,7 +86,7 @@
 //    return n.split('a').length-1;
 // }
 
-// Exercise 6
+// Exercise 6-sabita
 // Return true if the string "cat" and "dog" appear the same number of times in the given
 // string.
 //
@@ -95,8 +95,27 @@
 // catDog('catdog') → true
 // catDog('catcat') → false
 // catDog('1cat1cadodog') → true
+function catDog (str) {
+    var catCount = 0;
+    var dogCount = 0;
 
-// Exercise 7
+    for (var i = 0; i < str.length; i++) {
+        if(str.substring(i, i+3) == "cat") {
+            catCount += 1;
+        }
+        if(str.substring(i, i+3) == "dog") {
+            dogCount += 1;
+        }
+
+    }
+    if (catCount=== dogCount){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+// Exercise 7-sabita
 // Return the number of times that the string "code" appears anywhere in the given string,
 //     except we'll accept any letter for the 'd', so "cope" and "cooe" count.
 //
@@ -105,9 +124,20 @@
 // countCode('aaacodebbb') → 1
 // countCode('codexxcode') → 2
 // countCode('cozexxcope') → 2
+function countCode(string){
+    var count=0;
+    for(var i=0;i<string.length;i++){
+        if(string.substring(i,i+4)==="code"){
+            count=count+1;
+        }
 
 
-// Exercise 8
+    }
+    return count;
+}
+
+
+// Exercise 8-sabita
 // Given an array of ints, return true if 6 appears as either the first or last element in the array.
 //     The array will be length 1 or more.
 //
@@ -117,9 +147,19 @@
 // firstLast6([6, 1, 2, 3]) → true
 // firstLast6([13, 6, 1, 2, 3]) → false
 
+function firstLast6(array){
+if (array[0]===6 || array[array.length-1]===6){
+    return true;
+}else{
+    return false;
+}
+}
+
+console.log(firstLast6([1, 2, 6]));
+console.log(firstLast6([13, 6, 1, 2, 3]));
 
 
-// Exercise 9
+// Exercise 9-sabita
 // Given an array of ints, return true if the array is length 1 or more, and the first element and
 // the last element are equal.
 //
@@ -128,11 +168,30 @@
 // sameFirstLast([1, 2, 3]) → false
 // sameFirstLast([1, 2, 3, 1]) → true
 // sameFirstLast([1, 2, 1]) → true
+function sameFirstLast(array){
+    if((array.length>=1) && (array[0]===array[array.length -1])){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+console.log(sameFirstLast([1, 2, 3]));
+console.log(sameFirstLast([1, 2, 3, 1]));
 
 
-// Exercise 10
+
+// Exercise 10-sabita
 // Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
-
+function piToDigit(pi){
+    var pi=3.14;
+    pi=toString(pi);
+    // pi=split(pi);
+    return pi;
+}
+console.log(piToDigit());
+//
 
 // Exercise 11
 // Given 2 arrays of ints, a and b, return true if they have the same first element or they have the same
