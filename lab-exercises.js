@@ -1,6 +1,6 @@
-///Patrick's Lab Deliverable
+// Week 1 LAB Exercises
 
-// Exercise 1
+// Exercise 1 - Patrick
 // The parameter weekday is true if it is a weekday, and the parameter vacation
 // is true if we are on vacation. We sleep in if it is not a weekday or we're on ' +
 // 'vacation. Return true if we sleep in.
@@ -21,22 +21,8 @@
 //
 // console.log(sleepIn());
 
-// Week 1 LAB Exercises
 
-
-// Exercise 1
-// The parameter weekday is true if it is a weekday, and the parameter vacation
-// is true if we are on vacation. We sleep in if it is not a weekday or we're on ' +
-// 'vacation. Return true if we sleep in.
-//
-// Examples
-//
-// sleepIn(true, true) → true
-// sleepIn(true, false) → false
-// sleepIn(false, true) → true
-
-
-// Exercise 2
+// Exercise 2 - Patrick
 // Given two int values, return their sum. Unless the two values are the same, then
 // return double their sum.
 //
@@ -46,8 +32,11 @@
 // sumDouble(3, 2) → 5
 // sumDouble(2, 2) → 8
 
+// function sumDouble(value1,value2) {
+//     return value1 + value2
+// }
 
-// Exercise 3
+// Exercise 3 - Patrick
 // Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num) computes
 // the absolute value of a number.
 //
@@ -57,7 +46,17 @@
 // nearHundred(90) → true
 // nearHundred(89) → false
 
-// Exercise 4
+// function nearHundrea(n) {
+//     if (n >= math.abs(10-100) || n <= 100) {
+//         return true
+//     } else if (n >= math.abs(10-200) || n <= 200) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+
+// Exercise 4 - Patrick
 // Given a string and a non-negative int n, return a larger string that is n copies of the original
 // string.
 //
@@ -68,7 +67,13 @@
 // stringTimes('Hi', 1) → Hi
 
 
-// Exercise 5
+// function stringTimes(string,n) {
+//     return string.repeat(n)
+//
+// }
+
+
+// Exercise 5 - Patrick
 // Return the number of times that the string "hi" appears anywhere in the given string.
 //
 //     Examples
@@ -76,6 +81,10 @@
 // countHi('abc hi ho') → 1
 // countHi('ABChi hi') → 2
 // countHi('hihi') → 2
+
+// function countHi(n) {
+//    return n.split('a').length-1;
+// }
 
 // Exercise 6
 // Return true if the string "cat" and "dog" appear the same number of times in the given
