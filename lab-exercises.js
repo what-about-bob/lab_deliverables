@@ -193,6 +193,63 @@ function piToDigit(pi){
 console.log(piToDigit());
 //
 
+//Blossom
+// Exercise 2
+// Given two int values, return their sum. Unless the two values are the same, then
+// return double their sum.
+//
+//     Examples
+//
+// sumDouble(1, 2) → 3
+// sumDouble(3, 2) → 5
+// sumDouble(2, 2) → 8
+function sumdouble(int1, int2){
+    if(int1 === int2){
+        return (int1 + int2) * 2
+    }else{
+        return int1 + int2
+    }
+}
+
+console.log(sumdouble(3, 3));
+
+//Blossom
+//Write a function that returns the SUM of a sequence of numbers. This sequence is determined by three variables. start, finish, and step. the sequence begins at start, ends at finish, and goes up by step until it reaches finish or a number that when increased by step would go past finish.
+// Example:
+// input: start:1 finish: 4 step:1
+//output: 10
+
+//input: start: 4 finish: 10 step: 5
+//output:13
+
+function sumSequence(start, finish, step){
+    var sum = 0;
+    for(var i = start; i <= finish; i+=step){
+        sum += i
+    }
+    return sum;
+}
+
+console.log(sumSequence(1, 4, 1));
+
+//Blossom
+//Given a string of an length with any characters in it, write a function to determine whether or not the string contains the whole word "english". The order of characters/spelling is important, a string "agkjnspanishsad" would return true while "aspnsglinsah" would retun false. Upper and lower case does not matter. Return values should be booleans(true/false).
+
+function spanish(str){
+    var lower = str.toLowerCase()
+    var substring ="spanish";
+    var doesContain = lower.match(substring);
+    if (doesContain !=null){
+        return true;
+    }else{
+        return false;
+    }
+
+}
+
+
+console.log(spanish("agkjnSpAniShsad"));
+console.log(spanish("aspnsglinsah"));
 // Exercise 11
 // Given 2 arrays of ints, a and b, return true if they have the same first element or they have the same
 // last element. Both arrays will be length 1 or more.
